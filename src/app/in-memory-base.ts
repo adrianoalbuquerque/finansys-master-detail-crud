@@ -1,8 +1,8 @@
 import {InMemoryDbService} from 'angular-in-memory-web-api';
 
-import { Category } from '../pages/categories/service/category.model';
+import { Category } from './pages/categories/service/category.model';
 
-export class InMemeryDatabase implements InMemoryDbService {
+export class InMemoryDatabase implements InMemoryDbService {
 
   // tslint:disable-next-line: typedef
   createDb() {
