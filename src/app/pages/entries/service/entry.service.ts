@@ -9,11 +9,12 @@ import { BaseResourceService } from 'src/app/shared/services/base-resource.servi
   providedIn: 'root',
 })
 export class EntryService extends BaseResourceService<Entry> {
-
-  constructor(protected injector: Injector, private categoryService: CategoryService) {
-    super('api/entries', injector);
+  constructor(
+    protected injector: Injector,
+    private categoryService: CategoryService
+  ) {
+    super('api/entries', injector, Entry.fromJson);
   }
-
 
   create(entry: Entry): Observable<Entry> {
     // Configuração feita para resover problemas da apiFake
@@ -37,19 +38,4 @@ export class EntryService extends BaseResourceService<Entry> {
     );
   }
 
-
-  // PRIVATE METHODS
-  protected jsonDataToResources(jsonData: any[]): Entry[] {
-    const entries: Entry[] = [];
-
-    jsonData.forEach((element) => {
-      const entry = Object.assign(new Entry(), element);
-      entries.push(entry);
-    });
-    return entries;
-  }
-
-  protected jsonDataToResource(jsonData: any): Entry {
-    return Object.assign(new Entry(), jsonData);
-  }
 }
