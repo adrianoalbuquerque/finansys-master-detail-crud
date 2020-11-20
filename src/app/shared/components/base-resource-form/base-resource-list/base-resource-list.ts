@@ -16,7 +16,7 @@ export abstract class BaseResourceListComponent <T extends BaseResourceModel> im
     );
   }
 
-  deleteCategory(resource: T): void {
+  deleteResource(resource: T): void {
     const mustDelete = confirm('Deseja realmente excluir este item?');
 
     if (mustDelete) {
