@@ -11,7 +11,6 @@ import { CategoryService } from './../service/category.service';
   styleUrls: ['./category-form.component.css'],
 })
 export class CategoryFormComponent extends BaseResourceFormComponent<Category> {
-
   constructor(
     protected categoryService: CategoryService,
     protected injector: Injector
@@ -35,5 +34,4 @@ export class CategoryFormComponent extends BaseResourceFormComponent<Category> {
     const categoryName = this.resource.name || '';
     return 'Editando Categoria: ' + categoryName;
   }
-
 }
