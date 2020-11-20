@@ -2,6 +2,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -10,12 +11,14 @@ import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.compon
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
   ],
   exports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+    RouterModule,
     BreadCrumbComponent
   ]
 })

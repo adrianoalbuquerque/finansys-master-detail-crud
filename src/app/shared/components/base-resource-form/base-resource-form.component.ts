@@ -83,9 +83,8 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel>
     if (this.currentAction === 'new') {
       this.pageTitle = this.createPageTitle();
     } else {
-      this.editPageTitle();
-      // const categoryName = this.category.name || '';
-      // this.pageTitle = 'Editando Categoria: ' + categoryName;
+      this.editionPageTitle();
+      this.pageTitle = this.editionPageTitle();
     }
   }
 
@@ -93,7 +92,7 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel>
     return 'Novo';
   }
 
-  protected editPageTitle(): string {
+  protected editionPageTitle(): string {
     return 'Edição';
   }
 
