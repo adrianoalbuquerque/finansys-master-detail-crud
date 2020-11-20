@@ -5,7 +5,7 @@ import { Entry } from '../service/entry.model';
 import { Category } from './../../categories/service/category.model';
 import { CategoryService } from '../../categories/service/category.service';
 import { EntryService } from './../service/entry.service';
-import { BaseResourceFormComponent } from 'src/app/shared/components/base-resource-form/base-resource-form/base-resource-form.component';
+import { BaseResourceFormComponent } from 'src/app/shared/components/base-resource-form/base-resource-form.component';
 
 @Component({
   selector: 'app-entry-form',

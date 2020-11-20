@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BaseResourceListComponent } from 'src/app/shared/components/base-resource-form/base-resource-list/base-resource-list';
+import { BaseResourceListComponent } from 'src/app/shared/components/base-resource-list/base-resource-list';
 import { Category } from '../service/category.model';
 import { CategoryService } from '../service/category.service';
 

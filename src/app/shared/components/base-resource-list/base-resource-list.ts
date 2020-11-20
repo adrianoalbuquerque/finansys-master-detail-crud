@@ -1,8 +1,9 @@
-import { OnInit } from '@angular/core';
+import { OnInit, Directive } from '@angular/core';
 import { BaseResourceModel } from 'src/app/shared/models/base-resource.model';
 import { BaseResourceService } from 'src/app/shared/services/base-resource.service';
 
-
+@Directive()
+// tslint:disable-next-line: directive-class-suffix
 export abstract class BaseResourceListComponent <T extends BaseResourceModel> implements OnInit {
 
   resources: T[] = [];
