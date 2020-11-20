@@ -196,7 +196,7 @@ export class EntryFormComponent implements OnInit, AfterContentChecked {
     this.router
       .navigateByUrl('entries', { skipLocationChange: true })
       .then(() => {
-        this.router.navigate(['entries', entry.id, 'eidt']);
+        this.router.navigate(['entries', entry.id, 'edit']);
       });
   }
 
